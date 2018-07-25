@@ -3,6 +3,7 @@
 
 // eslint-disable-next-line no-unused-vars
 const store = (function(){
+
   const addItem = function(item) {
     this.items.push(item);
   };
@@ -12,7 +13,8 @@ const store = (function(){
   };
   // HERE IS WHERE WE ARE
   const findAndUpdate = function(id, newData) {
-    this.items.find(function(id) {})
+    let foundElement = this.items.find(item => item.id === id);
+    Object.assign(foundElement, newData);
   };
 
   const findAndDelete = function(id) {
