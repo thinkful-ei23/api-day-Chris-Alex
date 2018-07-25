@@ -102,9 +102,9 @@ const shoppingList = (function(){
       const itemName = $(event.currentTarget).find('.shopping-item').val();
       // store.findAndUpdateName(id, itemName);
       api.updateItem(id, {name: `${itemName}`}, () => { 
-        store.findAndUpdate(id, itemName);
+        store.findAndUpdate(id,{name: itemName});
+        render();
       });
-      render();
     });
   }
   
