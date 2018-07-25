@@ -11,7 +11,7 @@ const store = (function(){
   const findById = function(id) {
     return this.items.find(item => item.id === id);
   };
-  // HERE IS WHERE WE ARE
+  
   const findAndUpdate = function(id, newData) {
     let foundElement = this.items.find(item => item.id === id);
     Object.assign(foundElement, newData);
