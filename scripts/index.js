@@ -1,4 +1,4 @@
-/* global shoppingList, store, $, api */
+/* global shoppingList, store, $, api, Item */
 'use strict';
 
 $(document).ready(function() {
